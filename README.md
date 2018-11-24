@@ -1,2 +1,2 @@
 # Skybot
-Skybot! ㅡfor Discord
+Skybot! by Starlight
