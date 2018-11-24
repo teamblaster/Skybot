@@ -1,2 +1,2 @@
 # Skybot
-Skybot! -for Discord
+Skybot! ㅡfor Discord
