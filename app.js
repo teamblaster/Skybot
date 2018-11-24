@@ -13,6 +13,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+  if(message.author.bot) return;
   if (message.content.startsWith(prefix + '핑')) {
     message.channel.send(embed.ping(client))
     logger.info(message.author.id + ' : ping')
@@ -20,7 +21,7 @@ client.on('message', message => {
     message.channel.send(embed.uptime(client))
     logger.info(message.author.id + ' : uptime')
   } else if (message.content.startsWith(prefix + '도움')) {
-    message.channel.send('개발중...')
+    message.channel.send(embed.help(client, prefix))
   } else if (message.content == (prefix + '재시작')){
     if (message.author.id == '352755226224361482') {
       logger.debug('restarting...\n\n')
