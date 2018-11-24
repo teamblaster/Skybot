@@ -24,7 +24,7 @@ client.on('message', message => {
     message.channel.send(embed.help(client, prefix))
   } else if (message.content == (prefix + '재시작')){
     if (message.author.id == '352755226224361482') {
-      logger.debug('restarting...\n\n')
+      logger.debug('restarting...')
       logger.info('restarting...\n\n')
       process.exit(0)
     } else {
