@@ -14,9 +14,14 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if(message.author.bot) return;
+
+  var channel = message.channel
+  var author = message.author
+  var content = message.content
+
   if (message.content.startsWith(prefix + '핑')) {
-    message.channel.send(embed.ping(client))
-    logger.info(message.author.id + ' : ping')
+    channel.send(embed.ping(client))
+    logger.info(author.id + ' : ping')
   } else if (message.content.startsWith(prefix + '업타임')) {
     message.channel.send(embed.uptime(client))
     logger.info(message.author.id + ' : uptime')
@@ -32,6 +37,8 @@ client.on('message', message => {
       logger.debug(message.author.id + ' : restart denied')
       logger.info(message.author.id + ' : restart denied')
     }
+  } else if (message.content.startsWith(`${prefix}기능도움`)) {
+    message.channel.send(embed.help_func(client, prefix))
   }
 });
 
