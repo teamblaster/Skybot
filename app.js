@@ -29,7 +29,6 @@ client.on('message', message => {
     channel.send(embed.help(client, prefix))
   } else if (content == (prefix + '재시작')){
     if (author.id == '352755226224361482') {
-      message.reply('봇을 재시작합니다.')
       logger.debug('restarting...')
       logger.info('restarting...\n\n')
       process.exit(0)
