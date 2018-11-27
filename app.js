@@ -5,6 +5,7 @@ const config = require('./lib/config')
 const prefix = config.prefix
 const logger = require('./lib/logger')
 const embed = require('./lib/embed')
+const choose = require('./lib/choose')
 
 client.on('ready', () => {
   console.log('봇 시작됨');
@@ -39,6 +40,9 @@ client.on('message', message => {
     }
   } else if (message.content.startsWith(`${prefix}기능도움`)) {
     channel.send(embed.help_func(client, prefix))
+  } else if (content.startsWith(`${prefix}골라`)) {
+    channel.send(choose(content.replace(`${prefix}골라 `, ''), client))
+    logger.info(`${author.id} : be chosen`)
   }
 });
 
