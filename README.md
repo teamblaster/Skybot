@@ -9,4 +9,4 @@ Skybot! by Starlight
 
 # Participator
 - Starlight (Starlight#7528)
-- KimHaNeul (김하늘#320)
+- KimHaNeul (김현준#4320)
